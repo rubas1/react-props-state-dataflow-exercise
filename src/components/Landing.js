@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 class Landing extends Component {
-    /* your code here */
-
 
     render() {
-        return {/* your code here */ }
-
+        let hot=this.props.store.filter(t => t.hottest===true)
+        return (<div>
+            <p>Welcome, {this.props.user}, The hottest item is {hot.item} for {hot.price}</p>
+        </div>)
     }
 }
 
